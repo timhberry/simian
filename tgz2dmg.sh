@@ -122,6 +122,7 @@ while [[ "$#" -gt 0 ]]; do
       if [[ $PKGBUILD == "" ]]; then
         cp "$1" "${TMPDIR}/scripts"
       else
+        cp preinstall "${TMPDIR}/scripts"
         cp postinstall "${TMPDIR}/scripts"
         cp roots.pem "${TMPDIR}/scripts"
       fi
